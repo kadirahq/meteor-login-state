@@ -25,7 +25,7 @@ Tinytest.addAsync('loggedIn user', function(test, done) {
 
   Tracker.autorun(function(c) {
     if(Meteor.userId()) {
-      var data = JSON.parse(Cookie.get('aaa'));
+      var data = JSON.parse(decodeURI(Cookie.get('aaa')));
       test.equal(data.username, username);
       test.equal(data.url, window.location.origin);
       Meteor.logout()
