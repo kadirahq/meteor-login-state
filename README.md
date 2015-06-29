@@ -31,7 +31,8 @@ Include follwing JavaScript file to your stactic app.
 
 `<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>`
 
-Then, call `getLoginState(cookieName)` function to get loginState. You need to provide the `cookieName` correctly.
+Then, call `getLoginState(cookieName)` function to get loginState. You need to provide the correct `cookieName` for that.
+
 Here's the complete code sample;
 
 ```
