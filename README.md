@@ -31,11 +31,11 @@ Include follwing JavaScript file to your stactic app.
 
 `<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>`
 
-Then, call `getLoginState(cookieName)` function to get loginState. You need to provide the `cookieName` correctly.
+Then, call `loginState.get(cookieName)` function to get loginState. You need to provide the `cookieName` correctly.
 Here's the complete code sample;
 
 ```
-var loginState = getLoginState("app-login-state-cookie-name");
+var loginState = loginState.get("app-login-state-cookie-name");
 if(loginState) {
   // the user has loggedIn to the meteor app
   // see the loginState Object for the addtional data
