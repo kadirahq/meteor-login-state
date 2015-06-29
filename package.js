@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Share Login State Between the Sub Domains",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "git": "https://github.com/meteorhacks/login-state.git",
   "name": "meteorhacks:login-state"
 });

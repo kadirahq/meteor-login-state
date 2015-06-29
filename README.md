@@ -27,32 +27,22 @@ Update `settings.json` as follows. You need to provide appropiate values for `do
 
 ### On static app
 
-Use this JavaScript code on your static app to get the `loginState` by providing corerct cookie name.
+Include follwing JavaScript file to your stactic app.
+
+`<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>`
+
+Then, call `getLoginState(cookieName)` function to get loginState. You need to provide the `cookieName` correctly.
+Here's the complete code sample;
 
 ```
-$(function() {
-  function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
-    }
-    return "";
-  }
-  
-  // get loginState
-  var loginState = getCookie('app-login-state-cookie-name');
-  if(loginState) {
-    loginState = JSON.parse(decodeURIComponent(loginState));
-    console.log(loginState);
-    // the user has loggedIn to the meteor app
-    // see the loginState Object for the addtional data
-    // (append your code here!)
-  } else {
-    // user has not loggedIn yet.
-    // (append your code here!) 
-  }
-});
+var loginState = getLoginState("app-login-state-cookie-name");
+if(loginState) {
+  // the user has loggedIn to the meteor app
+  // see the loginState Object for the addtional data
+  // (append your code here!)
+  console.log(loginState);
+} else {
+  // user has not loggedIn yet.
+  // (append your code here!) 
+}
 ```
