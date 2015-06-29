@@ -8,7 +8,7 @@ Share Login State between the Domains for Meteor Apps
 
 #### Inatall
 
-`meteorhacks:login-state`
+`meteor add meteorhacks:login-state`
 
 #### Configuration
 
