@@ -1,6 +1,6 @@
 # Login State
 
-Share Login State between the Domains for Meteor Apps
+Share Login State between the Sub Domains for Meteor Apps
 
 ## How-To
 
@@ -15,10 +15,14 @@ Share Login State between the Domains for Meteor Apps
 Update `settings.json` as follows. You need to provide appropiate values for `domain` and `cookineName` fields.
 
 ```
-  "loginState": {
-    "domain": ".domain.com",
-    "cookieName": "app-login-state-cookie-name"
+{
+  "public": {
+    "loginState": {
+      "domain": ".domain.com",
+      "cookieName": "app-login-state-cookie-name"
+    }
   }
+}
 ```
 
 ### On static app
