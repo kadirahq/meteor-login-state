@@ -27,11 +27,12 @@ Update `settings.json` as follows. You need to provide appropiate values for `do
 
 ### On static app
 
-Include follwing JavaScript file to your stactic app.
+Include following JavaScript file into your html document.
 
 `<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>`
 
 Then, call `loginState.get(cookieName)` function to get loginState. You need to provide the `cookieName` correctly.
+
 Here's the complete code sample;
 
 ```
