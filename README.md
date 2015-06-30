@@ -16,11 +16,14 @@ This meteor package use for sharing login state information between apps hosted 
 
 Update `settings.json` as follows. You need to provide appropriate values for `domain` and `cookineName` fields.
 
+> Note: You must have mention the domain name in the `domain` field which you need to share the login states. 
+> By entering, `.your-domain-name.com` like this, it’s allows to share the login states across all the sub domains.
+
 ```json
 {
   "public": {
     "loginState": {
-      "domain": ".domain.com",
+      "domain": “.your-domain-name.com",
       "cookieName": "app-login-state-cookie-name"
     }
   }
