@@ -1,8 +1,10 @@
 # Login State
 
-Share Login State between the Sub Domains for Meteor Apps
+Share Login State between the Sub Domains for Meteor Apps (Support for static apps too)
 
-## How-To:
+## Getting Started
+
+This meteor package use for sharing login state information between apps hosted in different sub-domains. All apps are not necessory to be meteor apps. One app must be a meteor app and its login state information easialy can be share across multiple sub-domains with this.
 
 ### On Meteor App
 
@@ -12,7 +14,7 @@ Share Login State between the Sub Domains for Meteor Apps
 
 #### Configuration
 
-Update `settings.json` as follows. You need to provide appropiate values for `domain` and `cookineName` fields.
+Update `settings.json` as follows. You need to provide appropriate values for `domain` and `cookineName` fields.
 
 ```json
 {
@@ -33,12 +35,12 @@ Include this JavaScript file into your html document.
 <script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>
 ````
 
-Then, call `loginState.get(cookieName)` function to get loginState. You need to provide the correct `cookieName` for that.
+Then, call `LoginState.get(cookieName)` function to get loginState. You need to provide the correct `cookieName` for that.
 
 Here's the complete code sample;
 
 ```javascript
-var loginState = loginState.get("app-login-state-cookie-name");
+var loginState = LoginState.get("app-login-state-cookie-name");
 if(loginState) {
   // the user has loggedIn to the meteor app
   // see the loginState Object for the addtional data

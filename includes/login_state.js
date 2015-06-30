@@ -1,6 +1,6 @@
-loginState = {};
+LoginState = {};
 
-loginState.get = function(cookieName) {
+LoginState.get = function(cookieName) {
   var loginState = getCookie(cookieName);
   if(loginState) {
     return JSON.parse(decodeURIComponent(loginState));
