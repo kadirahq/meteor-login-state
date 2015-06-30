@@ -2,7 +2,7 @@
 
 Share Login State between the Sub Domains for Meteor Apps
 
-## How-To
+## How-To:
 
 ### On Meteor App
 
@@ -14,7 +14,7 @@ Share Login State between the Sub Domains for Meteor Apps
 
 Update `settings.json` as follows. You need to provide appropiate values for `domain` and `cookineName` fields.
 
-```
+```json
 {
   "public": {
     "loginState": {
@@ -27,15 +27,17 @@ Update `settings.json` as follows. You need to provide appropiate values for `do
 
 ### On static app
 
-Include following JavaScript file into your html document.
+Include this JavaScript file into your html document.
 
-`<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>`
+```javascript
+<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>
+````
 
-Then, call `loginState.get(cookieName)` function to get loginState. You need to provide the `cookieName` correctly.
+Then, call `loginState.get(cookieName)` function to get loginState. You need to provide the correct `cookieName` for that.
 
 Here's the complete code sample;
 
-```
+```javascript
 var loginState = loginState.get("app-login-state-cookie-name");
 if(loginState) {
   // the user has loggedIn to the meteor app
