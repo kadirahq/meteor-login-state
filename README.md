@@ -4,7 +4,7 @@ Share Login State between the Sub Domains for Meteor Apps (Support for static ap
 
 ## Getting Started
 
-This meteor package use for sharing login state information between apps hosted in different sub-domains. All apps are not necessory to be meteor apps. One app must be a meteor app and its login state can be share easialy across multiple sub-domains using this package.
+Using `meteorhacks:login-state` you can share the login information between apps hosted in different sub-domains. All apps are not necessory to be meteor apps. One app must be a meteor app and its login state can be share easialy across multiple sub-domains using this package.
 
 ### On Meteor App
 
