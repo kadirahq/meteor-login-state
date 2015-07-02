@@ -78,6 +78,18 @@ if(loginState) {
 }
 ```
 
+Content of the loginState will be something like this. It won't have any sensitive information like passwords or loginTokens.
+
+```js
+{
+  timestamp: 1435835751489,
+  username: "username",
+  userId: "meteor-user-id",
+  email: "user@email.com"
+  url: "https://ui.kadira.io"
+}
+```
+
 #### Installing via bower
 
 `bower install meteorhacks-login-state`
