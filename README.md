@@ -80,12 +80,12 @@ if(loginState) {
 
 #### Installing via bower
 
-`bower install meteor-login-state`
+`bower install meteorhacks-login-state`
 
 > See: [bower](http://bower.io/)
 
-#### Installing via NPM
+#### Installing via Browserify
 
-`npm install meteor-login-state`
+`npm install meteorhacks-login-state`
 
 Browsers doesn't allow to run nodejs modules directly. So, you need to use [browserify](http://browserify.org/) for that.

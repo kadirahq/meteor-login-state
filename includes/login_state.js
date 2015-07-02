@@ -19,3 +19,9 @@ function getCookie(cname) {
   }
   return "";
 }
+
+if(typeof module !== "undefined") {
+  module.exports = LoginState;
+} else {
+  window.LoginState = LoginState;
+}
