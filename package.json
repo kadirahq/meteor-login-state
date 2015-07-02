@@ -1,0 +1,26 @@
+{
+  "name": "meteorhacks-login-state",
+  "version": "0.0.1",
+  "description": "nodejs module for meteorhacks:login-state package",
+  "main": "includes/login_state.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:meteorhacks/login-state.git"
+  },
+  "keywords": [
+    "meteor",
+    "meteorhacks"
+  ],
+  "author": [
+    "arunoda <arunoda.susiripala@gmail.com> (https://github.com/arunoda)",
+    "thinkholic <mailtokasun@gmail.com> (https://github.com/thinkholic/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meteorhacks/login-state"
+  },
+  "homepage": "https://github.com/meteorhacks/login-state"
+}
