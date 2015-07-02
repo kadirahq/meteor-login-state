@@ -1,0 +1,26 @@
+{
+  "name": "meteor-login-state",
+  "version": "0.0.1",
+  "description": "bower implementation for meteorhacks:login-state package",
+  "main": [
+      "includes/login_state.js"
+    ],
+  "keywords": [
+    "meteorhacks",
+    "meteor"
+  ],
+  "authors": [
+    "thinkholic <mailtokasun@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "lib",
+    "package.js",
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
+}
