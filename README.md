@@ -4,7 +4,7 @@ Share Login State between the Sub Domains for Meteor Apps (Support for static ap
 
 ## Getting Started
 
-This meteor package use for sharing login state information between apps hosted in different sub-domains. All apps are not necessory to be meteor apps. One app must be a meteor app and its login state information easialy can be share across multiple sub-domains with this.
+This meteor package use for sharing login state information between apps hosted in different sub-domains. All apps are not necessory to be meteor apps. One app must be a meteor app and its login state can be share easialy across multiple sub-domains using this package.
 
 ### On Meteor App
 
@@ -16,14 +16,14 @@ This meteor package use for sharing login state information between apps hosted 
 
 Update `settings.json` as follows. You need to provide appropriate values for `domain` and `cookineName` fields.
 
-> Note: You must have mention the domain name in the `domain` field which you need to share the login states. 
-> By entering, `.your-domain-name.com` like this, it’s allows to share the login states across all the sub domains.
+> Note: You must have update the `domain` field in `settings.json`, with the domain name which you need to share login state. 
+> Eg: When your domain name and landing page is `mysite.com` and `app.mysite.com` is your app subdomain and, also `supports.mysite.com` is the support forum, then you need to update `domain` field as `.mysite.com`.
 
 ```json
 {
   "public": {
     "loginState": {
-      "domain": “.your-domain-name.com",
+      "domain": ".your-domain-name.com",
       "cookieName": "app-login-state-cookie-name"
     }
   }
@@ -32,15 +32,38 @@ Update `settings.json` as follows. You need to provide appropriate values for `d
 
 ### On static app
 
-Include this JavaScript file into your html document.
+#### Using custom JavaScript code
+
+
+Create a JavaScript file as `js/login_state.js` or given a name as you want. After that update following code there.
 
 ```javascript
-<script src="https://cdn.rawgit.com/thinkholic/login-state/master/includes/login_state.js" type="text/javascript"></script>
-````
+LoginState = {};
 
-Then, call `LoginState.get(cookieName)` function to get loginState. You need to provide the correct `cookieName` for that.
+LoginState.get = function(cookieName) {
+  var loginState = getCookie(cookieName);
+  if(loginState) {
+    return JSON.parse(decodeURIComponent(loginState));
+  } else {
+    return false;
+  }
+};
 
-Here's the complete code sample;
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1);
+      if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+  }
+  return "";
+}
+```
+
+Include it into your html document. Then you can call `LoginState.get(cookieName)` function to get login state by providing the correct cookie name.
+
+Here's the sample code for that;
 
 ```javascript
 var loginState = LoginState.get("app-login-state-cookie-name");
@@ -54,3 +77,15 @@ if(loginState) {
   // (append your code here!) 
 }
 ```
+
+#### Installing via bower
+
+`bower install meteor-login-state`
+
+> See: [bower](http://bower.io/)
+
+#### Installing via NPM
+
+`npm install meteor-login-state`
+
+Browsers doesn't allow to run nodejs modules directly. So, you need to use [browserify](http://browserify.org/) for that.
