@@ -1,7 +1,7 @@
 {
-  "name": "meteorhacks-login-state",
+  "name": "meteor-login-state",
   "version": "0.0.1",
-  "description": "bower implementation for meteorhacks:login-state package",
+  "description": "NodeJS module to access meteor login state",
   "main": [
       "includes/login_state.js"
     ],
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:meteorhacks/login-state.git"
+    "url": "git@github.com:kadirahq/meteor-login-state.git"
   },
   "authors": [
     "arunoda <arunoda.susiripala@gmail.com> (https://github.com/arunoda)",

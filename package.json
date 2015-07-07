@@ -1,14 +1,14 @@
 {
-  "name": "meteorhacks-login-state",
+  "name": "meteor-login-state",
   "version": "0.0.1",
-  "description": "nodejs module for meteorhacks:login-state package",
+  "description": "NodeJS module to access meteor login state",
   "main": "includes/login_state.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:meteorhacks/login-state.git"
+    "url": "git@github.com:kadirahq/meteor-login-state.git"
   },
   "keywords": [
     "meteor",
@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meteorhacks/login-state"
+    "url": "https://github.com/kadirahq/meteor-login-state"
   },
-  "homepage": "https://github.com/meteorhacks/login-state"
+  "homepage": "https://github.com/kadirahq/meteor-login-state"
 }
