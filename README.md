@@ -34,8 +34,9 @@ Update `settings.json` as follows. You need to provide appropriate values for `d
 
 #### Using custom JavaScript code
 
-
 Create a JavaScript file as `js/login_state.js` or given a name as you want. After that update following code there.
+
+> If this is an another meteor app, you don't have to create this manually. You just need to install the `kadira:login-state` package, and call the `LoginState.get(<cookieName>)` function with the correct cookie name.
 
 ```javascript
 LoginState = {};

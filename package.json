@@ -1,8 +1,8 @@
 {
   "name": "meteor-login-state",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "NodeJS module to access meteor login state",
-  "main": "includes/login_state.js",
+  "main": "client/login_state.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
