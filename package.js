@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Share Meteor Login State Between Sub Domains",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "git": "https://github.com/kadirahq/meteor-login-state.git",
   "name": "kadira:login-state"
 });
@@ -25,6 +25,7 @@ function configurePackage(api) {
   api.use('chuangbo:cookie@1.1.0');
   api.addFiles([
     'lib/login_state.js',
-    'lib/auto_connect.js'
+    'lib/auto_connect.js',
+    'client/login_state.js'
   ], 'client');
 }
