@@ -1,6 +1,6 @@
 {
   "name": "meteor-login-state",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "NodeJS module to access meteor login state",
   "main": "client/login_state.js",
   "scripts": {
