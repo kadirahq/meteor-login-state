@@ -34,3 +34,26 @@ Tinytest.addAsync('loggedIn user', function(test, done) {
     }
   });
 });
+
+Tinytest.add('get loginState', function(test) {
+  var data = {
+    timestamp: Date.now(),
+    username: "testuser",
+    userId: "121",
+    email: "ee@sadas.lk",
+    url: "http://localhost:3000/"
+  };
+
+  Cookie.set("abcd", JSON.stringify(data), {
+    path: "/",
+    expires: "5",
+    domain: ""
+  });
+
+  var loginState = LoginState.get("abcd");
+
+  test.equal(loginState.username, data.username);
+  test.equal(loginState.userId, data.userId);
+  test.equal(loginState.email, data.email);
+  test.equal(loginState.url, data.url);
+});

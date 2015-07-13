@@ -24,8 +24,8 @@ Package.on_test(function(api) {
 function configurePackage(api) {
   api.use('chuangbo:cookie@1.1.0');
   api.addFiles([
+    'client/login_state.js',
     'lib/login_state.js',
-    'lib/auto_connect.js',
-    'client/login_state.js'
+    'lib/auto_connect.js'
   ], 'client');
 }
