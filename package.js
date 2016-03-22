@@ -22,6 +22,7 @@ Package.on_test(function(api) {
 });
 
 function configurePackage(api) {
+  api.versionsFrom('1.0');
   api.use('chuangbo:cookie@1.1.0');
   api.use('tracker');
   api.use('random');
