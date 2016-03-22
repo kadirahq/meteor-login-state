@@ -8,7 +8,7 @@ Using `kadira:login-state` you can share the login information between apps host
 
 ### On Meteor App
 
-#### Inatall
+#### Install
 
 `meteor add kadira:login-state`
 
@@ -16,7 +16,7 @@ Using `kadira:login-state` you can share the login information between apps host
 
 Update `settings.json` as follows. You need to provide appropriate values for `domain` and `cookineName` fields.
 
-> Note: You must have update the `domain` field in `settings.json`, with the domain name which you need to share login state. 
+> Note: You must have update the `domain` field in `settings.json`, with the domain name which you need to share login state.
 > Eg: When your domain name and landing page is `mysite.com` and `app.mysite.com` is your app subdomain and, also `supports.mysite.com` is the support forum, then you need to update `domain` field as `.mysite.com`.
 
 ```json
@@ -75,7 +75,7 @@ if(loginState) {
   console.log(loginState);
 } else {
   // user has not loggedIn yet.
-  // (append your code here!) 
+  // (append your code here!)
 }
 ```
 

@@ -21,13 +21,18 @@ Tinytest.addAsync('loggedIn user', function(test, done) {
     }
   });
 
-  LoginState.init('', 'aaa', 2);
+  function getCustomData() {
+    return {aa: 10};
+  }
+
+  LoginState.init('', 'aaa', 2, getCustomData);
 
   Tracker.autorun(function(c) {
     if(Meteor.userId()) {
       var data = JSON.parse(decodeURI(Cookie.get('aaa')));
       test.equal(data.username, username);
       test.equal(data.url, window.location.origin);
+      test.equal(data.custom, {aa: 10});
       Meteor.logout()
       c.stop();
       Meteor.defer(done);
