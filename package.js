@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Share Meteor Login State Between Sub Domains",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "git": "https://github.com/kadirahq/meteor-login-state.git",
   "name": "kadira:login-state"
 });
